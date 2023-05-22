@@ -9,12 +9,12 @@ import DescriptionSection from './DescriptionSection';
 const Hero = () => {
   return (
     <>
-      <HeroSec>
+      <HeroSec id='Inicio'>
         <div className='bgHero'>
           <img src={BgHero} alt='background section' loading="lazy" />
         </div>
         <motion.div 
-          initial={{opacity: 0, x:500}}
+          initial={{opacity: 0, x:100}}
           whileInView={{opacity: 1, x: 0}}
           transition={{duration: 1}}
           >
@@ -70,7 +70,7 @@ const HeroSec = styled.div`
 
 const TextHero = styled.div`
   height: 100vh;
-  width: 100%;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -96,6 +96,8 @@ const TextHero = styled.div`
   }
 
   @media (max-width: 768px) {
+    align-items: center;
+
     p {
       font-size: 3rem;
       text-align: center;

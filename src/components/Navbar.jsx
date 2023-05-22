@@ -31,10 +31,10 @@ function Navbar() {
       <NavContainer>
           <img src={logo} alt='logo FanFab'/>
           <div className={`links ${clicked ? 'active' : ''}`}>
-            <a href='/'>Inicio</a>
-            <a href='/'>Servicios</a>
-            <a href='/'>Nuestro Trabajo</a>
-            <a href='/'>Nosotros</a>
+            <a href='/#Inicio'>Inicio</a>
+            <a href='/#Nosotros'>Nosotros</a>
+            <a href='/#Servicios'>Servicios</a>
+            <a href='/#Trabajo'>Nuestro Trabajo</a>
           </div>
           <div className='burger'>
             <BurgerButton clicked={clicked} handleClick={handleClick}/>
@@ -48,6 +48,7 @@ function Navbar() {
 export default Navbar
 
 const NavContainer = styled.nav`
+  max-width: 100vw;
   position: fixed;
   height: 64px;
   width: 100%;
@@ -65,6 +66,7 @@ const NavContainer = styled.nav`
 
   .burger {
     z-index: 100;
+
     @media(min-width: 768px){
       display: none;
     }
@@ -119,7 +121,11 @@ const NavContainer = styled.nav`
 
   .links.active {
     width: 100%;
-    display: block;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -153,8 +159,8 @@ const BgDiv = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    border-radius: 0 0 0 50%;
+    height: 100vh;
+    border-radius: 0 0 0 20%;
   }
   
   &::before {
@@ -163,8 +169,12 @@ const BgDiv = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(203, 190, 184, 0.9);
-    border-radius: 0 0 0 50%;
+    border-radius: 0 0 0 20%;
+  }
+
+  @media (mmax-width: 768px) {
+    max-width: 100vw 
   }
 `

@@ -21,7 +21,7 @@ function JoinSection() {
         </motion.div>
         <motion.div 
             className="jobsSec"
-            initial = {{opacity: 0, x: 500}}
+            initial = {{opacity: 0, x: 100}}
             whileInView={{opacity: 1, x: 0}}
             transition={{duration: 0.6}}
         >
@@ -84,6 +84,10 @@ const JoinWorks = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    @media (max-width: 768px) {
+        height: auto;
+    }
 
     .title {
         display: flex;
@@ -96,6 +100,11 @@ const JoinWorks = styled.div`
             width: 60%;
             margin: 5rem 3rem 2rem 3rem;
             opacity: .25;
+
+            @media (max-width: 768px) {
+                width: 90%;
+                font-size: 3rem;
+            }
         }
     }
 
@@ -106,12 +115,23 @@ const JoinWorks = styled.div`
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
+
+        @media (max-width: 768px) {
+            height: auto;
+        }
         
         .top, .bottom {
             width: 100%;
             height: 45%;
             display: flex;
             align-items: center;
+
+            
+            @media (max-width: 768px) {
+                flex-direction: column;
+                justify-content: center;
+                height: auto;
+            }
 
 
             .job {
@@ -123,6 +143,11 @@ const JoinWorks = styled.div`
                 height: 100%;
                 margin: 0 3rem;
                 border: 2px solid white;
+                
+                @media (max-width: 768px) {
+                    width: 90%;
+                    margin: 3rem 0;
+                }
 
                 h3, h4 {
                     position: relative;

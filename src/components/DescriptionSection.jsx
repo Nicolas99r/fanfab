@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 function DescriptionSection() {
   return (
     <>
-      <motion.div
-        initial = {{opacity: 0, scale: 1, x: 500}}
+      <motion.div id='Nosotros'
+        initial = {{opacity: 0, scale: 1, x: 100}}
         whileInView={{opacity: 1, scale: 1, x: 0}}
         transition={{duration: .6}}
       >
@@ -37,5 +37,6 @@ const TextSection = styled.div`
         margin: auto;
         font-size: 2rem;
         text-align: center;
+        padding: 10vh 1rem;
     }
 `

@@ -30,10 +30,19 @@ function ContactSection() {
   return (
     <ContacStyle>
         <div className='top'>
-            <div className="top-left">
+            <motion.div 
+                className="top-left"
+                drag
+                dragConstraints={{
+                    top: -10,
+                    left: -10,
+                    right: 10,
+                    bottom: 10
+                }}
+            >
                 <img src={logoTv} alt="" />
                 <h4>La mejor manera de expresar tus gustos</h4>
-            </div>
+            </motion.div>
             <form className="top-right" onSubmit={handleSubmit}>
                 <h3>Ponte en contacto</h3>
                 <div className="inputs-box">
@@ -113,12 +122,21 @@ const ContacStyle = styled.div`
     justify-content: space-between;
     padding: 64px 0 1rem 0;
 
+    @media (max-width: 768px) {
+        height: auto;
+    }
+
     .top {
         height: 75%;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            height: auto;
+        }
 
         .top-left {
             width: 30%;
@@ -127,10 +145,21 @@ const ContacStyle = styled.div`
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            @media (max-width: 768px) {
+                width: 90%;    
+                height: auto;
+                margin-bottom: 4rem;
+            }
             
             img {
                 width: 50%;
                 border-radius: 50%;
+                -webkit-user-drag: none;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
             }
 
             h4 {
@@ -149,9 +178,14 @@ const ContacStyle = styled.div`
             align-items: center;
             justify-content: center;
 
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+
             h3 {
                 font-size: 3rem;
                 font-weight: 200;
+                text-align: center;
             }
 
             div {
@@ -159,6 +193,10 @@ const ContacStyle = styled.div`
                 height: 20%;
                 padding: 1rem 2rem;
                 margin: 1rem 0;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
             }
 
             .inputs-box {
@@ -182,6 +220,9 @@ const ContacStyle = styled.div`
                         border-radius: 5px;
                         padding: .3rem .5rem;
                     }
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
         
                     .input-large {
                         height: 100%;
@@ -196,6 +237,7 @@ const ContacStyle = styled.div`
                 background-color: #F20544;
                 border-radius: 25px;
                 cursor: pointer;
+
             }
 
         }
@@ -207,12 +249,22 @@ const ContacStyle = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+            height: auto;
+            margin-top: 5rem;
+        }
 
         .logo-footer, .contact-info, .social {
             width: 30%;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media (max-width: 768px) {
+                width: 90%;
+            }
         }
 
         .logo-footer{

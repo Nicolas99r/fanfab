@@ -12,9 +12,9 @@ import work7 from '../Assets/projects/ijuly.png'
 
 function WorkSection() {
   return (
-    <OurWorks>
+    <OurWorks id='Trabajo'>
         <motion.div className='titleWorks'
-            initial = {{opacity: 0, x: 200}}
+            initial = {{opacity: 0, x: 100}}
             whileInView={{opacity: 1, x: 0}}
             transition={{duration: .6}}
         >
@@ -41,6 +41,7 @@ function WorkSection() {
 export default WorkSection
 
 const OurWorks = styled.div`
+    overflow-x: hidden;
     font-family: 'Jura', sans-serif;
     width: 100%;
     background-color: #D0D0D0;
@@ -52,11 +53,16 @@ const OurWorks = styled.div`
     padding: 4rem 0;
     
     .titleWorks {
-
+        overflow-y: hidden;
         width: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
+        
+        @media (max-width: 768px) {
+            height: auto;
+        }
 
         p {
             font-family: 'Jura', sans-serif;
@@ -65,8 +71,22 @@ const OurWorks = styled.div`
             width: 60%;
             margin: 2rem 4rem;
 
+            
+            @media (max-width: 768px) {
+                height: auto;
+            }
+
             span {
                 color: #F20544;
+                
+                @media (max-width: 768px) {
+                    height: auto;
+                }
+            }
+
+            @media (max-width: 768px) {
+                width: 90%;
+                margin: 2rem 1rem;
             }
         }
     }

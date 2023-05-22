@@ -73,4 +73,8 @@ const ButtonToGo = styled.div`
         opacity: 0;	
         transform: scale(0.1, 1);
     }
+
+    @media (max-width: 768px){
+        margin: 7rem 0 0 0;
+    }
 `

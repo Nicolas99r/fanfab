@@ -8,18 +8,18 @@ import Expertos from '../Assets/expertos.jpg'
 
 function SolutionsSection() {
   return (
-    <SolutionsStyles>
+    <SolutionsStyles id='Servicios'>
         <h2>Soluciones a tu manera</h2>
         <div className="container">
             <motion.section
-                initial={{opacity: 0, x: 500}}
+                initial={{opacity: 0, x: 100}}
                 whileInView={{opacity: 1, x: 0}}
                 transition={{duration: .6}}
             >
                 <div className="content">
                     <motion.div 
                         className='description'
-                        initial={{opacity: 0, y: -500}}
+                        initial={{opacity: 0, y: -100}}
                         whileInView={{opacity: 1, y: 0}}
                         transition={{duration: .6}}
                     >
@@ -30,13 +30,13 @@ function SolutionsSection() {
                 </div>
             </motion.section>
             <motion.section
-                initial={{opacity: 0, x: -500}}
+                initial={{opacity: 0, x: -100}}
                 whileInView={{opacity: 1, x: 0}}
                 transition={{duration: .6}}
             >
                 <div className="content">
                     <motion.div className='description'
-                        initial={{opacity: 0, y: -500}}
+                        initial={{opacity: 0, y: -100}}
                         whileInView={{opacity: 1, y: 0}}
                         transition={{duration: .6}}>
                         <h3>Trabajo en colaboración</h3>
@@ -46,13 +46,13 @@ function SolutionsSection() {
                 </div>
             </motion.section>
             <motion.section
-                initial={{opacity: 0, x: 500}}
+                initial={{opacity: 0, x: 100}}
                 whileInView={{opacity: 1, x: 0}}
                 transition={{duration: .6}}
             >
                 <div className="content">
                     <motion.div className='description'
-                        initial={{opacity: 0, y: -500}}
+                        initial={{opacity: 0, y: -100}}
                         whileInView={{opacity: 1, y: 0}}
                         transition={{duration: .6}}>
                         <h3>Equipo de expertos</h3>
@@ -69,12 +69,19 @@ function SolutionsSection() {
 export default SolutionsSection
 
 const SolutionsStyles = styled.div`
+    overflow-x: hidden;
     height: 300vh;
     width: 100%;
 
     background-color: #D0D0D0;
     color: #0D0D0D;
     z-index: 1;
+
+
+    @media (max-width: 768px) {
+        height: auto;
+        flex-direction: column;
+    }
 
     h2 {
         position: absolute;
@@ -85,6 +92,10 @@ const SolutionsStyles = styled.div`
         width: 50%;
         opacity: .25;
         z-index: 2;
+
+        @media (max-width: 768px) {
+            font-size: 3rem;
+        }
     }
 
     .container {
@@ -101,12 +112,26 @@ const SolutionsStyles = styled.div`
             align-items: center;
             height: 100vh;
             padding: 4rem;
+            
+            @media (max-width: 768px) {
+                flex-direction: column;
+                height: 100vh;
+                padding: 1rem;
+                margin-top: 15rem;
+            }
 
             .content {
                 height: 80vh;
                 display: flex;
                 align-items: flex-end;
                 justify-content: flex-end;
+                
+                @media (max-width: 768px) {
+                    flex-direction: column-reverse;
+                    height: auto;
+                    align-items: center;
+                    justify-content: center;
+                }
                 
                 .description {
                     display: flex;
@@ -116,10 +141,22 @@ const SolutionsStyles = styled.div`
                     width: 50%;
                     text-align: right;
                     padding: 0 2rem 0 0;
+                    
+                    @media (max-width: 768px) {
+                        text-align: center;
+                        width: 90%;
+                        padding: 0;
+                        align-items: center;
+                        justify-content: center
+                    }
 
                     h3 {
                         font-size: 4rem;
                         font-weight: 200;
+                        
+                        @media (max-width: 768px) {
+                            font-size: 3rem;
+                        }
                     }
 
                     p {
@@ -139,6 +176,11 @@ const SolutionsStyles = styled.div`
                     height: 100%;
                     width: 40%;
                     object-fit: cover;
+
+                    
+                    @media (max-width: 768px) {
+                        width: 80%;
+                    }
                 }
             }
         }
@@ -147,11 +189,22 @@ const SolutionsStyles = styled.div`
     .container section:nth-child(2) .content {
         flex-direction: row-reverse;
 
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+
         .description {
             text-align: left;
             padding: 0 0 0 2rem;
             align-items: flex-start;
             justify-content: flex-start;
+
+            @media (max-width: 768px) {
+                text-align: center;
+                padding: 0;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 `
