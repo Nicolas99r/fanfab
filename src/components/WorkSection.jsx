@@ -18,7 +18,7 @@ function WorkSection() {
             whileInView={{opacity: 1, x: 0}}
             transition={{duration: .6}}
         >
-            <p>En FanFab, te invitamos a explorar nuestro fascinante <span>arsenal creativo</span>, donde encontrarás una amplia gama de creaciones multimedia cautivadoras.</p>
+            <p>En FanFab, te invitamos a explorar nuestro fascinante <span>arsenál creativo</span>, donde encontrarás una amplia gama de creaciones multimedia cautivadoras.</p>
         </motion.div>
         <motion.div 
             className='gallery'

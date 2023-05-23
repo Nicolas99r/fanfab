@@ -26,15 +26,19 @@ function Navbar() {
     setClicked(!clicked)
   }
 
+  const handleLinkClick = () => {
+    setClicked(false); // Cerrar el panel de enlaces al hacer clic en un enlace
+  };
+
   return (
     <div className={color ? 'header-bg' : ''}>
       <NavContainer>
           <img src={logo} alt='logo FanFab'/>
           <div className={`links ${clicked ? 'active' : ''}`}>
-            <a href='/#Inicio'>Inicio</a>
-            <a href='/#Nosotros'>Nosotros</a>
-            <a href='/#Servicios'>Servicios</a>
-            <a href='/#Trabajo'>Nuestro Trabajo</a>
+            <a href='/#Inicio' onClick={handleLinkClick}>Inicio</a>
+            <a href='/#Nosotros' onClick={handleLinkClick}>Nosotros</a>
+            <a href='/#Servicios' onClick={handleLinkClick}>Servicios</a>
+            <a href='/#Trabajo' onClick={handleLinkClick}>Nuestro Trabajo</a>
           </div>
           <div className='burger'>
             <BurgerButton clicked={clicked} handleClick={handleClick}/>
