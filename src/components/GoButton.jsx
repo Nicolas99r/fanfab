@@ -2,10 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 function GoButton() {
+
+    const handleClick = () => {
+        const element = document.getElementById('Nosotros');
+        element.scrollIntoView({ behavior: 'smooth' });
+      };
+
   return (
     <ButtonToGo>
-        <div className="btn btn-one">
-            <span>DA EL PRIMER PASO</span>
+        <div className="btn btn-one" onClick={handleClick}>
+            <span>CONÓCENOS</span>
         </div>
     </ButtonToGo>
   )

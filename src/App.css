@@ -10,6 +10,8 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  margin: 0 auto;
+  max-width: 1480px;
 }
 
 body {
@@ -17,6 +19,12 @@ body {
   font-family: 'Inter', sans-serif;
   color: #d0d0d0;
   overflow-x: hidden;
+  margin: 0 auto;
+  max-width: 1480px;
+  display: flex; /* Agregado */
+  flex-direction: column;
+  justify-content: center; /* Agregado */
+  align-items: center; /* Agregado */
 }
 
 a {

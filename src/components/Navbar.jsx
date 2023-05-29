@@ -52,7 +52,7 @@ function Navbar() {
 export default Navbar
 
 const NavContainer = styled.nav`
-  max-width: 100vw;
+  max-width: 1480px;
   position: fixed;
   height: 64px;
   width: 100%;

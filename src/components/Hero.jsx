@@ -5,6 +5,7 @@ import BgLines from '../Assets/bglines.svg';
 import BgHero from '../Assets/bghero.jpg';
 import GoButton from './GoButton';
 import DescriptionSection from './DescriptionSection';
+import CompanySection from './CompanySection';
 
 const Hero = () => {
   return (
@@ -38,6 +39,7 @@ const Hero = () => {
           </TextHero>
         </motion.div>
           <DescriptionSection />
+          <CompanySection/>
       </HeroSec>
     </>
   );
@@ -46,7 +48,7 @@ const Hero = () => {
 export default Hero;
 
 const HeroSec = styled.div`
-
+  max-width: 1480px;
   overflow: hidden;
   height: 200vh;
   width: 100%;
@@ -55,6 +57,7 @@ const HeroSec = styled.div`
   background-repeat: no-repeat;
 
   .bgHero {
+    max-width: 1480px;
     position: absolute;
     height: 100vh;
     width: 100%;
