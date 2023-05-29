@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
+import TalentSection from './TelentSection'
 
 import job1 from '../Assets/ux.jpg'
 import job2 from '../Assets/dev.jpg'
@@ -10,68 +11,71 @@ import more from '../Assets/icons8-flecha-50.png'
 
 function JoinSection() {
   return (
-    <JoinWorks>
-        <motion.div 
-            className="title"
-            initial = {{opacity: 0, y: 100}}
-            whileInView={{opacity: 1, y: 0}}
-            transition={{duration: 0.6}}
-        >
-            <h2>Únete a nosotros</h2>
-        </motion.div>
-        <motion.div 
-            className="jobsSec"
-            initial = {{opacity: 0, x: 100}}
-            whileInView={{opacity: 1, x: 0}}
-            transition={{duration: 0.6}}
-        >
-            <div className="top">
-                <motion.a 
-                    href='#' 
-                    className="job job-1"
-                    whileHover={{scale: 1.05}}
-                    whileTap={{scale: 0.9}}
-                >
-                    <h3>UI/UX Designer</h3>
-                    <h4>Remoto</h4>
-                </motion.a>
-                <motion.a  
-                    href='#' 
-                    className="job job-2"
-                    whileHover={{scale: 1.05}}
-                    whileTap={{scale: 0.9}}
-                >
-                    <h3>Fullstack Web Developer</h3>
-                    <h4>Remoto</h4>
-                </motion.a>
-            </div>
-            <div className="bottom">
-                <motion.a 
-                    href='#' 
-                    className="job job-3"
-                    whileHover={{scale: 1.05}}
-                    whileTap={{scale: 0.9}}
-                >
-                    <h3>Motion Graphics Designer</h3>
-                    <h4>Remoto</h4>
-                </motion.a>
-                <motion.a 
-                    href='#' 
-                    className="job job-4"
-                    whileHover={{scale: 1.05}}
-                    whileTap={{scale: 0.9}}
-                >
-                    <h3>Audiovisual Editor</h3>
-                    <h4>Remoto</h4>
-                </motion.a>
-                <a href="" className="more">
-                    <img src={more} alt="" />
-                    
-                    <p>Ver más</p>
-                </a>
-            </div>
-        </motion.div>
-    </JoinWorks>
+    <>
+        <JoinWorks>
+            <motion.div 
+                className="title"
+                initial = {{opacity: 0, y: 100}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6}}
+            >
+                <h2>Únete a nosotros</h2>
+            </motion.div>
+            <motion.div 
+                className="jobsSec"
+                initial = {{opacity: 0, x: 100}}
+                whileInView={{opacity: 1, x: 0}}
+                transition={{duration: 0.6}}
+            >
+                <div className="top">
+                    <motion.a 
+                        href='#' 
+                        className="job job-1"
+                        whileHover={{scale: 1.05}}
+                        whileTap={{scale: 0.9}}
+                    >
+                        <h3>UI/UX Designer</h3>
+                        <h4>Remoto</h4>
+                    </motion.a>
+                    <motion.a  
+                        href='#' 
+                        className="job job-2"
+                        whileHover={{scale: 1.05}}
+                        whileTap={{scale: 0.9}}
+                    >
+                        <h3>Fullstack Web Developer</h3>
+                        <h4>Remoto</h4>
+                    </motion.a>
+                </div>
+                <div className="bottom">
+                    <motion.a 
+                        href='#' 
+                        className="job job-3"
+                        whileHover={{scale: 1.05}}
+                        whileTap={{scale: 0.9}}
+                    >
+                        <h3>Motion Graphics Designer</h3>
+                        <h4>Remoto</h4>
+                    </motion.a>
+                    <motion.a 
+                        href='#' 
+                        className="job job-4"
+                        whileHover={{scale: 1.05}}
+                        whileTap={{scale: 0.9}}
+                    >
+                        <h3>Audiovisual Editor</h3>
+                        <h4>Remoto</h4>
+                    </motion.a>
+                    <a href="" className="more">
+                        <img src={more} alt="" />
+                        
+                        <p>Ver más</p>
+                    </a>
+                </div>
+            </motion.div>
+        </JoinWorks>
+        <TalentSection/>
+    </>
   )
 }
 
